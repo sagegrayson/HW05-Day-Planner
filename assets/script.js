@@ -27,11 +27,57 @@ console.log("script loaded");
 // start app?
 
 function time() {
-
 	// sets current day in jumbotron
 	$("#currentDay").text(moment().format("LLLL"));
 
-	
+	// gets information from local storage and sets text area
+	var stored = Object.keys(localStorage);
+	for (let i = 0; i < stored.length; i++) {
+		var value = localStorage.getItem(stored[i]);
+		var temp = $("#" + stored[i]).find("textarea");
+		temp.val(value);
+	}
+
+	// saves text box on click
+	$(".saveBtn").on("click", function (event) {
+		event.preventDefault();
+		console.log(this);
+		// gets the current value of the text box
+		var value = $(this).siblings(".description").val();
+		// gets the id that the time box is in
+		var time = $(this).parent().attr("id");
+		// saves both in local storage
+		localStorage.setItem(time, value);
+	});
+
+	function timeColor() {
+		var currentHour = moment().hours();
+
+		$(".time-block").each(function () {
+			// sets hour of block from id
+			var hour = $(this).attr("id");
+            // turns hour into an integer
+			var intHour = parseInt(hour);
+            // turns current hour into an integer
+			var intCurrentHour = parseInt(currentHour);
+            // if else to set color
+			if (parseInt(intHour) < parseInt(intCurrentHour)) {
+				$(this).addClass("past");
+				$(this).removeClass("future");
+				$(this).removeClass("present");
+			} else if (parseInt(intHour) > parseInt(intCurrentHour)) {
+				$(this).addClass("future");
+				$(this).removeClass("present");
+				$(this).removeClass("past");
+			} else if (parseInt(intHour) === parseInt(intCurrentHour)) {
+				$(this).addClass("present");
+				$(this).removeClass("future");
+				$(this).removeClass("past");
+			}
+		});
+	}
+
+	timeColor();
 }
 
 time();

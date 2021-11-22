@@ -33,7 +33,9 @@ function time() {
 	// gets information from local storage and sets text area
 	var stored = Object.keys(localStorage);
 	for (let i = 0; i < stored.length; i++) {
+		// gets item from local storage
 		var value = localStorage.getItem(stored[i]);
+		// sets text area as local storage value
 		var temp = $("#" + stored[i]).find("textarea");
 		temp.val(value);
 	}
@@ -56,11 +58,11 @@ function time() {
 		$(".time-block").each(function () {
 			// sets hour of block from id
 			var hour = $(this).attr("id");
-            // turns hour into an integer
+			// turns hour into an integer
 			var intHour = parseInt(hour);
-            // turns current hour into an integer
+			// turns current hour into an integer
 			var intCurrentHour = parseInt(currentHour);
-            // if else to set color
+			// if else to set color
 			if (parseInt(intHour) < parseInt(intCurrentHour)) {
 				$(this).addClass("past");
 				$(this).removeClass("future");

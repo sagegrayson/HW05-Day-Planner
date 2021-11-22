@@ -25,3 +25,13 @@ console.log("script loaded");
 
 // INITIALIZATION ===============================
 // start app?
+
+function time() {
+
+	// sets current day in jumbotron
+	$("#currentDay").text(moment().format("LLLL"));
+
+	
+}
+
+time();

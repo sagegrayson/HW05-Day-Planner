@@ -18,7 +18,7 @@
 			href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./assets/style.css" />
 		<title>Work Day Scheduler</title>
 	</head>
 
@@ -31,17 +31,83 @@
 			<p id="currentDay" class="lead"></p>
 		</header>
 		<div class="container">
-			<div class="time-block row">
-				<div class="hour">9 AM</div>
+			<!-- Timeblocks -->
+			<div class="time-block row" id="9am">
+				<div class="hour col-md-1">9 AM</div>
 				<textarea
-					class="description"
+					class="description col-md-10"
 					placeholder="Input Form"
 				></textarea>
-				<button class="saveBtn">Save</button>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="10am">
+				<div class="hour col-md-1">10 AM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="11am">
+				<div class="hour col-md-1">11 AM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="12pm">
+				<div class="hour col-md-1">12 PM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="1pm">
+				<div class="hour col-md-1">1 PM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="2pm">
+				<div class="hour col-md-1">2 PM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="3pm">
+				<div class="hour col-md-1">3 PM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="4pm">
+				<div class="hour col-md-1">4 PM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
+			</div>
+			<div class="time-block row" id="5pm">
+				<div class="hour col-md-1">5 PM</div>
+				<textarea
+					class="description col-md-10"
+					placeholder="Input Form"
+				></textarea>
+				<button class="saveBtn col-md-1"><i class="fas fa-save"></i></button>
 			</div>
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script src="./assets/script.js"></script>
 	</body>
 </html>

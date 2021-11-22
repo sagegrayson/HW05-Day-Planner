@@ -8,6 +8,8 @@
 
 This is a js based day planner which makes use of local storage and current time values.
 
+[Link](https://sagegrayson.github.io/HW5-Day-Planner/)
+
 ## Contents
 
 -   [Usage](#usage)
